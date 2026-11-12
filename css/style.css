@@ -51,6 +51,11 @@ section {
   scroll-margin-top: 0;
 }
 
+.icon-diagonal {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
 /* Navigation */
 .topbar {
   min-height: 80px;
@@ -231,8 +236,8 @@ h1 em {
   color: white;
   transform: rotate(-12deg);
 }
-.round-link svg {
-  width: 25px;
+.round-link .fa-solid {
+  font-size: 25px;
 }
 .ticker {
   flex: none;
@@ -255,9 +260,9 @@ h1 em {
   letter-spacing: -0.03em;
   white-space: nowrap;
 }
-.ticker-item b {
+.ticker-item .fa-asterisk {
   color: var(--acid);
-  font: 14px var(--mono);
+  font-size: 14px;
 }
 
 /* Shared editorial headings */
@@ -501,7 +506,7 @@ h1 em {
   white-space: nowrap;
   transition: color 0.25s;
 }
-.portfolio-visit span {
+.portfolio-visit .fa-solid {
   display: inline-block;
   margin-left: 6px;
   font-size: 18px;
@@ -512,9 +517,9 @@ h1 em {
 .portfolio-link:focus-visible .portfolio-visit {
   color: var(--acid);
 }
-.portfolio-link:hover .portfolio-visit span,
-.portfolio-link:focus-visible .portfolio-visit span {
-  transform: translate(3px, -3px);
+.portfolio-link:hover .portfolio-visit .fa-solid,
+.portfolio-link:focus-visible .portfolio-visit .fa-solid {
+  transform: translate(3px, -3px) rotate(45deg);
 }
 
 /* Pricing */
@@ -674,6 +679,10 @@ h1 em {
 .contact-link:hover {
   color: var(--acid);
   border-color: var(--acid);
+}
+.contact-link .fa-solid {
+  font-size: 0.7em;
+  vertical-align: 0.08em;
 }
 footer {
   display: flex;
@@ -867,8 +876,8 @@ footer a:hover {
   .round-link {
     width: 64px;
   }
-  .round-link svg {
-    width: 19px;
+  .round-link .fa-solid {
+    font-size: 19px;
   }
   .ticker-item {
     gap: 20px;
